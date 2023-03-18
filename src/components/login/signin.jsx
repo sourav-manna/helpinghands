@@ -1,5 +1,6 @@
 import "./Sty.css";
 import {useNavigate } from "react-router-dom";
+import {useEffect } from "react";
 import { useState } from "react";
 // import { useDispatch } from "react-redux";
 // import { authActions } from "../store";
@@ -11,6 +12,12 @@ const Signin = () => {
   const [email, setEmail] = useState();
   const [pass, setPass] = useState();
   const [warning, setWarning] = useState("");
+
+  useEffect(()=>{
+    if(localStorage.getItem("category")){
+      navigate("/mypage");
+    }
+  });
 
   const loginnow = () => {
     if (!email) {

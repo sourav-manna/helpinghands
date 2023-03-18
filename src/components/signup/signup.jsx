@@ -1,9 +1,9 @@
 import axios from "axios";
 import { useState } from "react";
+import {useNavigate } from "react-router-dom";
+import {useEffect } from "react";
 // import { authActions } from "../store";
 import { useDispatch } from "react-redux";
-
-import { useNavigate } from "react-router-dom";
 
 const categories = ["Food", "Medical", "Rescue", "Infrastructure", "Others"];
 const Signup = () => {
@@ -14,6 +14,12 @@ const Signup = () => {
   const [pass, setPass] = useState();
   const [warning, setWarning] = useState();
   const [category, setCategory] = useState();
+
+  useEffect(()=>{
+    if(localStorage.getItem("category")){
+      navigator("/mypage");
+    }
+  });
 
   const handleCategoryChange = (event) => {
     setCategory(event.target.value);
