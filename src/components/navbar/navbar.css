@@ -73,13 +73,15 @@ li {
 }
 
 .menu-link {
+ 
   grid-column: 3/4;
 }
 
 .menu-link ul {
   height: 4rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 2rem;
   align-items: center;
 }
 
