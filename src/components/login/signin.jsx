@@ -26,8 +26,7 @@ const Signin = () => {
           if (response.data.status) {
             localStorage.setItem("category", response.data.docs.category);
             localStorage.setItem("name", response.data.docs.name);
-            // navigate("/mypage");
-            window.location.href = "/mypage";
+            navigate("/mypage");
           } else {
             setWarning("Invalid \n  Email Id or Password");
           }

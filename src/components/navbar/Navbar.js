@@ -1,41 +1,53 @@
 import React, { useState, useEffect } from "react";
 import "./navbar.css";
-import { FaTwitterSquare } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
-// import { authActions } from "../store";
-import { NavLink } from "react-router-dom";
-// import { useSelector, useDispatch } from "react-redux";
+import { Link, NavLink } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
+
 
 
 function refreshPage() {
   window.location.reload(false);
 }
 
-function Logout() {
-  localStorage.clear();
-  window.location.href = "/signin";
-}
 
-function SignUp(){
-  window.location.href = "/";
-  
-}
-// function Inout(){
-//   if(localStorage.length>0) return true;
-//   else return false;
-// }
 const Navbar = () => {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
   // const isLoggedIn = useSelector(state => state.isLoggedIn);
   const [isLoggedIn, setLogged] = useState(false);
+  const [mystate, setMystate] = useState("");
+  const navigator = useNavigate();
+
+  const changeHandler = () => {
+    if(localStorage.length>0) 
+    {
+      setLogged(true);
+      setMystate("Logout");
+    }
+    else 
+     {
+      setLogged(false);
+      setMystate("Login");
+    }
+     console.log(localStorage.length, isLoggedIn)
+  }
+
+  const logHandler = () => {
+    if (mystate === "Login"){
+      navigator("../signin");
+    }else{
+      localStorage.clear();
+      navigator("../signin");
+    }
+    changeHandler();
+  }
 
   useEffect(()=>{
-    
-     if(localStorage.length>0) setLogged(true);
-     else setLogged(false);
-     console.log(localStorage.length, isLoggedIn)
-    
+    changeHandler();
   });
+ 
+  
+
   return (
     <>
       <nav className="main-nav">
@@ -68,20 +80,9 @@ const Navbar = () => {
             <li>
               <a href="#">Feedback</a>
             </li>
-            {isLoggedIn ? (
-              <li>
-                <a href="#" onClick={Logout} target="_blank">
-                  Logout
-                </a>
-              </li>
-            ):(
-              
-              <li>
-                <a onclick={SignUp} target="_blank">
-                  Sign Up
-                </a>
-              </li>
-          )}
+            <li>
+              <a onClick={()=>{logHandler()}}>{mystate}</a>
+            </li>
             
           </ul>
         </div>

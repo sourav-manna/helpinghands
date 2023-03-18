@@ -12,12 +12,12 @@ function App() {
       <div className="body-main">
         <BrowserRouter>
           <Navbar />
-          {/* <Routes>
+          <Routes>
             <Route path="/mypage" element={<MyPage />} />
             <Route path="/signin" element={<Signin />} />
             <Route exact path="/" element={<Signup />} />
-          </Routes> */}
-          <Login />
+          </Routes>
+          {/* <Login /> */}
         </BrowserRouter>
       </div>
     </div>
