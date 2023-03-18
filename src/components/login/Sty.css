@@ -24,6 +24,26 @@
     border-radius: 5px;
     background-color: white;
 }
+
+.log input:invalid{
+  color: red; 
+  animation: shake 300ms;
+ 
+}
+
+@keyframes shake {
+  25% {
+    transform: translateX(4px);
+  }
+  50% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
+
+
   .log select {
     width: 280px;
     height: 40px;

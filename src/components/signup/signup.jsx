@@ -1,10 +1,14 @@
 import axios from "axios";
 import { useState } from "react";
+// import { authActions } from "../store";
+import { useDispatch } from "react-redux";
+
 import { useNavigate } from "react-router-dom";
 
 const categories = ["Food", "Medical", "Rescue", "Infrastructure", "Others"];
 const Signup = () => {
   const navigator = useNavigate();
+  // const dispath = useDispatch();
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [pass, setPass] = useState();
@@ -25,6 +29,7 @@ const Signup = () => {
       };
       axios
         .post("https://floodsupportapi.azurewebsites.net/signup", data)
+        // .then(() => dispath(authActions.login()))
         .then((res) => {
           if (res.data.status) {
             console.log("user data store");
