@@ -4,8 +4,6 @@ import Navbar from "./components/navbar/Navbar";
 import Signup from "./components/signup/signup";
 import Signin from "./components/login/signin";
 import MyPage from "./components/mypage";
-import { Login } from "./components/RegisterLogin/Login";
-
 
 
 function App() {
