@@ -1,0 +1,13 @@
+.main-container{
+  position: fixed;
+  height: 90%;
+  width: 60px !important;
+}
+.main-container2{
+  margin-left: 100px;
+  display: flex;
+}
+.main-container2 .twl{
+  align-self: center;
+  padding-left: 5%;
+}
