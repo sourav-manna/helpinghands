@@ -119,6 +119,7 @@
     color: rgb(153, 2, 2);
     height: 30px;
     font-size: larger;
+    float: right;
   }
   
   .log span {

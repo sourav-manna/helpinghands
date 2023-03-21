@@ -46,6 +46,7 @@ const Signin = () => {
       <table>
         <tr>
           <h2>Log In</h2>
+          
           <pre>{warning}</pre>
         </tr>
         <tr>
@@ -75,7 +76,7 @@ const Signin = () => {
           </td>
         </tr>
         <tr>
-          <td className="btn">
+          <td>
             <button type="submit" onClick={loginnow}>
               Submit
             </button>
