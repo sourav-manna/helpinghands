@@ -4,6 +4,7 @@ import Navbar from "./components/navbar/Navbar";
 import Signup from "./components/signup/signup";
 import Signin from "./components/login/signin";
 import MyPage from "./components/mypage";
+import { LandingPage } from "./components/Landingpage/LandingPage";
 
 
 function App() {
@@ -13,9 +14,10 @@ function App() {
         <BrowserRouter>
           <Navbar />
           <Routes>
-            <Route path="/mypage" element={<MyPage />} />
-            <Route path="/signin" element={<Signin />} />
-            <Route exact path="/" element={<Signup />} />
+            <Route exact path="/mypage" element={<MyPage />} />
+            <Route exact path="/signin" element={<Signin />} />
+            <Route exact path="/signup" element={<Signup />} />
+            <Route exact path="/" element={<LandingPage/>} />
           </Routes>
           {/* <Login /> */}
         </BrowserRouter>

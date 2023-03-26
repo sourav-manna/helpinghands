@@ -1,0 +1,148 @@
+.container{
+    display: flex;
+    height: 100vh;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 3rem;
+}
+
+.landing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: start; */
+    width: 50%;
+
+}
+
+.landing__title{
+    font-weight: 700;
+    color: black;
+    margin-bottom: 1px;
+    width: auto;
+    height: auto;
+    font-size: 5svw;
+    letter-spacing: 2px;
+    margin-top: 0;
+}
+
+.landing__title--span {
+    color: #5993E2;
+}
+
+#desc{
+    width: 100%;
+}
+
+#desc p{
+    word-break:normal;
+    margin-top: 0;
+}
+
+.btndiv{
+    display: flex;
+    width: 50%;
+    height: 10%;
+    gap: 1rem;
+    align-items: start;
+}
+
+.landing__button{
+    font-size: 15px !important;
+    border: 1px solid black;
+    color: black;
+    padding:2% 5%;
+    width: 50%;
+    border-radius: 2px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#reg{
+    background-color: #5993E2;
+    color: white;
+    border: 1px solid #5993E2;
+}
+
+#login{
+    background-color: rgba(128, 128, 128, 0.219);
+}
+
+.landing__button:hover{
+    scale: 0.9;
+    transition: 0.5s;
+}
+
+.container1{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.landing__img{
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+@media (max-width: 490px) {
+    body {
+        background-color: rgb(255, 255, 255);
+    }
+
+}
+    
+@media(max-width: 767px) {
+    .container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+
+    .landing{
+        width: auto;
+        margin: 0 5rem;
+        margin-left: 0;
+    }
+
+    .landing__title{
+        font-size: 8vw !important;
+    }
+
+    .container1{
+        width: auto;
+    }
+
+    .container1 img{
+        width: 70%;
+        height: auto;
+    }
+    .btn{
+        display: flex;
+        width: 50%;
+        height: 8%;
+        gap: 1rem;
+        align-items: start;
+    }
+    #login,#reg{
+        font-size: 2vw !important;
+    }
+    .landing{
+        width: 100%;
+    }
+}
+    
+@media (max-width: 992px){
+    .landing__title{
+        font-size: 5vw;
+    }
+}
+        
