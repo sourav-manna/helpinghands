@@ -2,8 +2,6 @@ import axios from "axios";
 import { useState } from "react";
 import {useNavigate } from "react-router-dom";
 import {useEffect } from "react";
-// import { authActions } from "../store";
-import { useDispatch } from "react-redux";
 
 const categories = ["Food", "Medical", "Rescue", "Infrastructure", "Others"];
 const Signup = () => {

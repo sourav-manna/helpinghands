@@ -84,7 +84,7 @@ const Signin = () => {
         </tr>
         <tr>
           <td>
-          <button type="submit" onClick={() => navigator("/signup")}>
+          <button type="submit" onClick={() => navigate("/signup")}>
               Signup Instead
             </button>
           </td>
