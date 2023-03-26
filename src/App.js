@@ -12,11 +12,10 @@ function App() {
     <div className="App">
       <div className="body-main">
         <BrowserRouter>
-          <Navbar />
           <Routes>
-            <Route exact path="/mypage" element={<MyPage />} />
-            <Route exact path="/signin" element={<Signin />} />
-            <Route exact path="/signup" element={<Signup />} />
+            <Route exact path="/mypage" element={<><Navbar /> <MyPage /></>} />
+            <Route exact path="/signin" element={<><Signin /></>} />
+            <Route exact path="/signup" element={<><Signup /></>} />
             <Route exact path="/" element={<LandingPage/>} />
           </Routes>
           {/* <Login /> */}

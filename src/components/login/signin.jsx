@@ -82,6 +82,13 @@ const Signin = () => {
             </button>
           </td>
         </tr>
+        <tr>
+          <td>
+          <button type="submit" onClick={() => navigator("/signup")}>
+              Signup Instead
+            </button>
+          </td>
+        </tr>
       </table>
     </div>
   );

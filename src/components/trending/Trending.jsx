@@ -51,7 +51,7 @@ const Blogstuc = (props) =>{
                         {Blog['Tweet_Text']}
                 </div>
                 <div>
-                        <center><button>Donate Now !</button></center>
+                        <center><button>View Details↗️</button></center>
                 </div>
             </div>
         </div>
