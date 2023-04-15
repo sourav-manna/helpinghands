@@ -74,7 +74,7 @@
 }
 
 
-.blog-body button{
+.blog-body .view-btn {
     height: 40px;
     width: 150px;
     margin-top: 30px;
@@ -84,7 +84,7 @@
     border-radius: 10px;
 }
 
-.blog-body button:hover{
+.blog-body view-btn:hover{
     background-color: rgb(0, 137, 139);
     color: white;
     cursor: pointer;

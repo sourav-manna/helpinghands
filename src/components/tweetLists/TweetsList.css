@@ -36,26 +36,26 @@
     border-radius: 5px 5px 5px 5px;
 }
 
-.btn {
+.btn-for-tweet {
     margin-top: 10px;
     text-align: center;
-    background-color: #00687f!important;
+    background-color: #00687f;
     width: 40%;
     cursor: pointer;
     font-size: 15px !important;
     
   }
   
-  .btn-one {
+  .btn-one-for-tweet {
     color: rgba(234, 205, 205, 0.808) !important;
     transition: all 0.3s;
     position: relative;
   }
-  .btn-one span {
+  .btn-one-for-tweet span {
     transition: all 0.3s;
     color: white;
   }
-  .btn-one::before {
+  .btn-one-for-tweet::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -73,14 +73,14 @@
     border-bottom-color: rgba(255,255,255,0.5);
     transform: scale(0.1, 1);
   }
-  .btn-one:hover span {
+  .btn-one-for-tweet:hover span {
     letter-spacing: 2px;
   }
-  .btn-one:hover::before {
+  .btn-one-for-tweet:hover::before {
     opacity: 1; 
     transform: scale(1, 1); 
   }
-  .btn-one::after {
+  .btn-one-for-tweet::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -91,7 +91,7 @@
     transition: all 0.3s;
     background-color: rgba(255, 255, 255, 0.237);
   }
-  .btn-one:hover::after {
+  .btn-one-for-tweet:hover::after {
     opacity: 0; 
     transform: scale(0.1, 1);
   }

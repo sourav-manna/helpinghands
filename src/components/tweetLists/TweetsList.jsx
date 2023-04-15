@@ -1,9 +1,11 @@
 import './TweetsList.css'
+import '../LoginRegister/LoginRegister.css'
 //import moment from 'moment'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 //import { useNavigate } from 'react-router-dom'
 import './roledesign.css'
+
 //import { arrayWithHoles } from '@thumbtack/thumbprint-react/dist/cjs/_virtual/_rollupPluginBabelHelpers'
 
 const TweetsList = () => {
@@ -97,7 +99,7 @@ const TweetsList = () => {
                           {blogs.Tweet_Text}
                         </div>
                         <div>
-                        <a  className="btn btn-one" onClick={()=> openInNewTab('https://twitter.com/'+blogs.Username+'/status/'+blogs.Tweetid)}>
+                        <a  className="btn-for-tweet btn-one-for-tweet" onClick={()=> openInNewTab('https://twitter.com/'+blogs.Username+'/status/'+blogs.Tweetid)}>
                             <span>View Details</span>
                         </a>
                         </div>

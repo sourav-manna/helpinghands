@@ -1,0 +1,179 @@
+:root {
+  --primaryColor: #5993e2;
+  --HoverColor: hsl(224, 92%, 76%);
+  --paleBlue: #c2d6f5;
+  --whiteColor: #fff;
+  --blackColor: #000;
+  --textColor: #333;
+  --bgColor: #f5f5f5;
+  --greyText: #777;
+  --inputColor: hsl(330, 12%, 96%);
+  /* Font and Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.9rem;
+  --smallFontSize: 0.8rem;
+  --smallerFontSize: 0.7rem;
+}
+
+.topSection .headerSection {
+  justify-content: space-between;
+}
+.topSection .headerSection .title1 h1 {
+  font-size: var(--h1FontSize);
+  color: var(--blackColor);
+  font-weight: 700;
+}
+.topSection .headerSection .title1 p {
+  font-size: var(--normalFontSize);
+  color: var(--textColor);
+  font-weight: 500;
+}
+.topSection .headerSection .searchBar {
+  padding: 1rem 1rem;
+  background: var(--whiteColor);
+  border-radius: 5px;
+  gap: 1rem;
+  box-shadow: 0 2px 4px var(--inputColor);
+}
+.topSection .headerSection .searchBar input {
+  border: none;
+  outline: none;
+  background: none;
+}
+.topSection .headerSection .searchBar .icon {
+  color: var(--textColor);
+}
+.topSection .headerSection .searchBar .icon:hover {
+  color: var(--primaryColor);
+}
+.topSection .headerSection .adminDiv {
+  gap: 1rem;
+}
+.topSection .headerSection .adminDiv .icon {
+  font-size: var(--biggestFontSize);
+  background: var(--whiteColor);
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0 2px 4px var(--inputColor);
+  color: var(--textColor);
+}
+.topSection .headerSection .adminDiv .adminImage {
+  border: 3px solid var(--whiteColor);
+  border-radius: 10px;
+  width: 2.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 4px var(--inputColor);
+}
+.topSection .headerSection .adminDiv .adminImage img {
+  width: 100%;
+  height: 100%;
+  box-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.topSection .cardSection {
+  margin-top: 1rem;
+  gap: 1rem;
+}
+.topSection .cardSection .rightCard {
+  position: relative;
+  flex-basis: 70%;
+  height: 150px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.topSection .cardSection .rightCard .videoDiv {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.topSection .cardSection .rightCard .videoDiv video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.topSection .cardSection .rightCard h1, .topSection .cardSection .rightCard p {
+  z-index: 100;
+}
+.topSection .cardSection .rightCard h1 {
+  font-size: var(--h1FontSize);
+  color: var(--whiteColor);
+  font-weight: 800;
+}
+.topSection .cardSection .rightCard p {
+  color: var(--whiteColor);
+  font-weight: 500;
+}
+.topSection .cardSection .leftCard {
+  flex-basis: 50%;
+}
+.topSection .cardSection .leftCard .mainStat {
+  position: relative;
+  padding: 1rem;
+  height: 150px;
+  border-radius: 1rem;
+  justify-content: space-between;
+}
+.topSection .cardSection .leftCard .mainStat::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 75%;
+  background: var(--paleBlue);
+  left: 0;
+  bottom: 0;
+  border-radius: 1rem;
+}
+.topSection .cardSection .leftCard .mainStat .textDiv {
+  z-index: 100;
+}
+.topSection .cardSection .leftCard .mainStat .textDiv h1 {
+  font-size: var(--h1FontSize);
+  padding-bottom: 0.5rem;
+  color: var(--blackColor);
+}
+.topSection .cardSection .leftCard .mainStat .textDiv .flex {
+  gap: 1.5rem;
+  font-weight: 500;
+  color: var(--blackColor);
+}
+.topSection .cardSection .leftCard .mainStat .textDiv .flex small {
+  font-size: var(--normalFontSize);
+  display: block;
+  color: var(--primaryColor);
+  font-weight: 500;
+  padding: 0.5rem 0;
+}
+.topSection .cardSection .leftCard .mainStat .textDiv .link {
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.topSection .cardSection .leftCard .mainStat .textDiv .link:hover {
+  color: var(--primaryColor);
+}
+.topSection .cardSection .leftCard .mainStat .textDiv .link:hover .icon {
+  transform: translateX(10px);
+  transition: 0.3s ease-in-out;
+}
+.topSection .cardSection .leftCard .mainStat .imgDiv {
+  transform: translateY(-20px);
+}
+.topSection .cardSection .leftCard .mainStat .imgDiv img {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=top.css.map */
