@@ -1,4 +1,4 @@
-.container{
+.containerforlanding{
     display: flex;
     height: 100vh;
     width: auto;
@@ -127,10 +127,11 @@
     }
     .btn{
         display: flex;
-        width: 50%;
-        height: 8%;
+        /* width: 50%;
+        height: 8%; */
         gap: 1rem;
-        align-items: start;
+        justify-content: center;
+        align-items: center;
     }
     #login,#reg{
         font-size: 2vw !important;

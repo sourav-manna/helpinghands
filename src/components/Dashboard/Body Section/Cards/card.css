@@ -1,0 +1,73 @@
+:root {
+    --primaryColor:  #5993e2;
+    --HoverColor: hsl(224, 92%, 76%);
+    --paleBlue: #c2d6f5;
+    --whiteColor: #fff;
+    --blackColor: #000;
+    --textColor: #333;
+    --bgColor: #f5f5f5;
+    --greyText: #777;
+    --inputColor: hsl(330, 12%, 96%);
+    --itemCardColor: hsl(120, 5%, 88%);
+    --itemCardHoverColor: hsl(120, 27%, 87%);
+  
+  
+    /* Font and Typography */
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: 0.9rem;
+    --smallFontSize: 0.8rem;
+    --smallerFontSize: 0.7rem;
+    --smallestFontSize: 0.6rem;
+  }
+
+.parentCardDiv{
+    padding: 3px;
+}
+
+.childCardDiv{
+    background: var(--whiteColor);
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.childCardDiv:hover{
+    background: var(--paleBlue);
+    transform: translateY(-.5rem);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+}
+
+.headingCard{
+    font-size: var(--h1FontSize);
+}
+
+.cardPara{
+    font-size: var(--h3FontSize);
+    padding-bottom: 10px;
+}
+
+.status{
+
+}
+
+.pendingStatus{
+    border: none;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    padding: 2px 5px;
+    color: rgb(175, 8, 8);
+    margin-right: 10px;
+    background-color: rgba(241, 105, 105, 0.774);
+}
+
+.addButton{
+    border: none;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: rgb(17, 78, 17);
+    background-color: rgba(8, 151, 108, 0.548);
+}
