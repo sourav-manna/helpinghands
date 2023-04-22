@@ -1,13 +1,132 @@
+
+
 .main-container{
-  position: fixed;
+  /* position: fixed;
   height: 90%;
-  width: 60px !important;
+  width: 60px !important; */
+  position: relative;
+  width: 95vw;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bgColor);
+  overflow: hidden;
+  border-radius: 1rem;
+  margin: auto;
+  margin-top: 1rem;
+  box-shadow: 2px 2px 8px var(--greyText);
 }
-.main-container2{
+/* .main-container2{
   margin-left: 100px;
   display: flex;
 }
 .main-container2 .twl{
   align-self: center;
   padding-left: 5%;
+} */
+
+
+/* Font and Typography */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  transition: 0.3s ease;
 }
+
+/* Colors and Styles  */
+
+:root {
+  --primaryColor:  #5993e2;
+  --HoverColor: hsl(224, 92%, 76%);
+  --paleBlue: #c2d6f5;
+  --whiteColor: #fff;
+  --blackColor: #000;
+  --textColor: #333;
+  --bgColor: #f5f5f5;
+  --greyText: #777;
+  --inputColor: hsl(330, 12%, 96%);
+  --itemCardColor: hsl(120, 5%, 88%);
+  --itemCardHoverColor: hsl(120, 27%, 87%);
+
+
+  /* Font and Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.9rem;
+  --smallFontSize: 0.8rem;
+  --smallerFontSize: 0.7rem;
+  --smallestFontSize: 0.6rem;
+}
+
+/* Global Styles */
+
+html {
+  font-size: 90%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+
+.icon {
+  font-size: var(--h2FontSize);
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.btn1 {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--inputColor);
+  padding: .8rem 1rem;
+  color: var(--textColor)
+}
+
+.btn1 .icon {
+  margin-left: .5rem;
+}
+
+.btn1:hover{
+  background: var(--paleBlue);
+  color: var(--PrimaryColor);
+}
+
+
+/* Hide Scrollbar thumb*/
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+

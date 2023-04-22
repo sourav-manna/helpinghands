@@ -6,6 +6,7 @@ import moment from 'moment';
 import './Trending.css';
 
 
+
 const Blogstuc = (props) =>{
     
     const [Blog, setBlog] = useState({})
@@ -51,7 +52,7 @@ const Blogstuc = (props) =>{
                         {Blog['Tweet_Text']}
                 </div>
                 <div>
-                        <center><button>View Details↗️</button></center>
+                        <center><button className='view-btn'>View Details↗️</button></center>
                 </div>
             </div>
         </div>
