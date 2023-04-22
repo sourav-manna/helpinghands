@@ -69,7 +69,7 @@ const Activity = () => {
                 <span className="name">{localStorage.getItem("name")}</span>
                 <small>{item?.status} task posted by {item?.username}</small>
               </div>
-              <div className="duration">2 min ago</div>
+              <div className="duration">{inProTime}</div>
             </div>
           )
         }

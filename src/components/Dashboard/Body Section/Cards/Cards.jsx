@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import { useDispatch } from "react-redux";
+import Swal from 'sweetalert2'
 import "./card.css";
 
 export const Cards = (props) => {
   const [status, setStatus] = useState(props.status);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   // calculate current time
   var today = new Date();
   var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
@@ -25,7 +27,11 @@ export const Cards = (props) => {
     }).then((res) => {
       if (res.data.status === true) {
         console.log(res.data.docs);
-        alert("Tweet added to progress");
+        Swal.fire({
+          icon: 'success',
+          title: 'Tweet added to progress',
+        })
+        navigate('/mypage/inprogress')
         dispatch({
           type: "INPROCESS_TIME",
           payload: time,
@@ -47,7 +53,11 @@ export const Cards = (props) => {
     }).then((res) => {
       if (res.data.status === true) {
         console.log(res.data.docs);
-        alert("Tweet added to complete");
+        Swal.fire({
+          icon: 'success',
+          title: 'Congrats! You have completed the task',
+        })
+        navigate('/mypage/completed')
         dispatch({
           type: "COMPLETED_TIME",
           payload: time,
@@ -60,13 +70,13 @@ export const Cards = (props) => {
   if (status === "pending") {
     btnActivity = (
       <button className="addButton" onClick={AddToProgress}>
-        <Link to="/mypage/inprogress">Mark To Process</Link>
+        <Link >Mark as Process</Link>
       </button>
     );
   } else if (status === "inprocess") {
     btnActivity = (
       <button className="addButton" onClick={AddToComplete}>
-        <Link to="/mypage/completed">Mark To Complete</Link>
+        <Link >Mark as Complete</Link>
       </button>
     );
   } else if (status === "completed") {

@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import axios from "axios";
 import "./top.css";
 import video from "../../../Assets/vid1.mp4";
 
@@ -9,6 +10,25 @@ import { MdOutlineNotificationsNone } from "react-icons/md";
 import { BsArrowRight } from "react-icons/bs";
 
 const Top = () => {
+
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    axios({
+      method: "get",
+      url: "https://floodsupportapi.azurewebsites.net/stats",
+
+    }).then((response) => {
+      if(response.status === 200){
+        setData(response.data);
+        
+      }
+    });
+  }, []);
+
+
+
+
   return (
     <div className="topSection">
       <div className="headerSection flex">
@@ -48,15 +68,19 @@ const Top = () => {
               <h1>Our Stat</h1>
               <div className="flex">
                 <span>
-                  Today <br /> <small>4 requests</small>
+                  Completed <br /> <small>{data.completed} </small>
                 </span>
                 <span>
-                  This Month <br /> <small>127 requests</small>
+                  Inprogress <br /> <small>{data.inprogress} </small>
+                </span>
+                <span>
+                  Pending <br /> <small>{data.pending} </small>
+                </span>
+                <span>
+                  Total <br /> <small>{data.total} </small>
                 </span>
               </div>
-              <span className="flex link">
-                Go to Our Charts <BsArrowRight className="icon" />
-              </span>
+              
             </div>
 
             <div className="imgDiv">
