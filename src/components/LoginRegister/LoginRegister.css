@@ -316,7 +316,7 @@ form.sign-in-form {
   .sign-up-form{
     width: 100%;
     top: 95%;
-    transform: translate(18%, -5%);
+    transform: translate(0%, -5%);
     transition: 1s 0.8s ease-in-out;
   }
 
@@ -363,9 +363,8 @@ form.sign-in-form {
   }
 
   .panel p {
-    font-size: 1rem !important;
+    font-size: 0.8rem !important;
     padding: 0.5rem 0;
-    
   }
 
   .btn.transparent {
@@ -390,7 +389,7 @@ form.sign-in-form {
 
   .containerLog.sign-up-mode:before {
     transform: translate(-50%, 100%);
-    bottom: 31%;
+    bottom: 32%;
     right: initial;
   }
 
@@ -440,10 +439,9 @@ form.sign-in-form {
   }
 
   .containerLog.sign-up-mode:before {
-    bottom: 22%;
+    bottom: 25%;
     left: 50%;
   }
-
 
   .panel h3 {
     font-size: 1.2rem;
@@ -457,13 +455,13 @@ form.sign-in-form {
   .sign-up-form{
     width: 100%;
     top: 95%;
-    transform: translate(25%, 0%);
+    transform: translate(0%, 0%);
     transition: 1s 0.8s ease-in-out;
   }
   .sign-in-form{
     width: 100%;
     top: 95%;
-    transform: translate(0%, -5%);
+    transform: translate(0%, -15%);
     transition: 1s 0.8s ease-in-out;
   }
 }
@@ -480,13 +478,13 @@ form.sign-in-form {
   .sign-up-form{
     width: 100%;
     top: 90%;
-    transform: translate(25%, 0%);
+    transform: translate(0%, 0%);
     transition: 1s 0.8s ease-in-out;
   }
   .sign-in-form{
     width: 100%;
     top: 90%;
-    transform: translate(0%, -5%);
+    transform: translate(0%, -15%);
     transition: 1s 0.8s ease-in-out;
   }
 }
