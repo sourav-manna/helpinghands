@@ -36,10 +36,15 @@
 }
 .activitySection .secContainer {
   margin-top: 1rem;
+  max-height: 23rem;
+  height: 23rem;
+  overflow: auto;
+  border-left: 2px solid var(--itemCardColor);
 }
 .activitySection .secContainer .singleCustomer {
   align-items: flex-start;
   justify-content: space-between;
+  padding: 0.5rem;
 }
 .activitySection .secContainer .singleCustomer img {
   width: 40px;

@@ -5,16 +5,16 @@
   height: 90%;
   width: 60px !important; */
   position: relative;
-  width: 95vw;
-  height: 95vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--bgColor);
   overflow: hidden;
-  border-radius: 1rem;
+  border-radius: 0rem;
   margin: auto;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   box-shadow: 2px 2px 8px var(--greyText);
 }
 /* .main-container2{

@@ -47,34 +47,34 @@
     height: 10%;
     gap: 1rem;
     align-items: start;
+    
 }
 
 .landing__button{
     font-size: 15px !important;
-    border: 1px solid black;
+    
     color: black;
     padding:2% 5%;
     width: 50%;
-    border-radius: 2px;
+    border-radius: 1rem;
+    margin-top: 1rem;
     text-decoration: none;
     text-align: center;
     font-weight: bold;
     letter-spacing: 1px;
+    border: none;
 }
 
-#reg{
-    background-color: #5993E2;
-    color: white;
-    border: 1px solid #5993E2;
-}
+
 
 #login{
-    background-color: rgba(128, 128, 128, 0.219);
+    background-color: #5993E2;
 }
 
 .landing__button:hover{
     scale: 0.9;
     transition: 0.5s;
+    background-color: #b6cff1 !important;
 }
 
 .container1{
