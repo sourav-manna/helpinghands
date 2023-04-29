@@ -23,7 +23,7 @@ export const LoginRegister = () => {
   });
 
   // signup validation using regex
-  const nameRegex = /^[A-Za-z]+$/;
+  const nameRegex = /^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)/;
   const emailRegex =
     /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
   const passwordRegex = /^[A-Za-z0-9!@#$%^&*()_]{6,20}$/;

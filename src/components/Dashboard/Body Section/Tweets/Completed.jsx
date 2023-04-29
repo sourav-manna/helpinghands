@@ -29,11 +29,15 @@ export const Completed = () => {
     <div>
       {data && data?.map((item) => {
       return(
-          <Cards  
-          username={item.username}
-          tweetText={item.tweetText}
-          status={item.status}
-          />
+        <Cards
+        _id={item._id}
+        username={item.username}
+        followerCount={item.followerCount}
+        tweetText={item.tweetText}
+        status={item.status}
+        date={item.date}
+        location={item.location}
+      />
       )
   }
   )}

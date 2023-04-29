@@ -22,7 +22,7 @@
 }
 
 .listingSection {
-  flex-basis: 86%;
+  flex-basis: 110%;
   margin-top: 1rem;
 }
 .listingSection .heading {
@@ -38,9 +38,17 @@
   -moz-column-gap: 1rem;
        column-gap: 1rem;
 }
+.listingSection .secContainer .tweetOption .bar-active {
+  color: #005288;
+  background-color: #c2d6f5;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
 .listingSection .secContainer .tweetDiv {
   max-height: 21rem;
-  height: 21rem;
   overflow: auto;
   border-radius: 1rem;
   border: 1px solid var(--itemCardColor);

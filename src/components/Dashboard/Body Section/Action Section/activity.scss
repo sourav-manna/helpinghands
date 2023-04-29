@@ -1,5 +1,5 @@
 :root {
-    --primaryColor:  #5993e2;
+    --primaryColor: #5993e2;
     --HoverColor: hsl(224, 92%, 76%);
     --paleBlue: #c2d6f5;
     --whiteColor: #fff;
@@ -10,8 +10,7 @@
     --inputColor: hsl(330, 12%, 96%);
     --itemCardColor: hsl(120, 5%, 88%);
     --itemCardHoverColor: hsl(120, 27%, 87%);
-  
-  
+
     /* Font and Typography */
     --biggestFontSize: 2.5rem;
     --h1FontSize: 1.5rem;
@@ -21,31 +20,36 @@
     --smallFontSize: 0.8rem;
     --smallerFontSize: 0.7rem;
     --smallestFontSize: 0.6rem;
-  }
+}
 
-
-.activitySection{
+.activitySection {
     flex-basis: 50%;
     margin-top: 1rem;
-    .heading{
+
+    .heading {
         width: 100%;
         justify-content: space-between;
 
-        h1{
+        h1 {
             font-size: var(--h2FontSize);
             color: var(--blackColor);
             font-weight: 700;
         }
     }
 
-    .secContainer{
+    .secContainer {
         margin-top: 1rem;
+        max-height: 23rem;
+        height: 23rem;
 
-        .singleCustomer{
+        overflow: auto;
+        border-left: 2px solid var(--itemCardColor);
+        .singleCustomer {
             align-items: flex-start;
             justify-content: space-between;
+            padding: 0.5rem;
 
-            img{
+            img {
                 width: 40px;
                 height: 40px;
                 object-fit: cover;
@@ -54,23 +58,23 @@
                 margin-right: 1rem;
             }
 
-            .customerDetails{
+            .customerDetails {
                 flex: 1;
-                .name{
+                .name {
                     font-size: var(--h3FontSize);
                     font-weight: 600;
                     color: var(--blackColor);
                     display: block;
                 }
 
-                small{
+                small {
                     font-weight: 500;
                     color: var(--textColor);
                     font-size: var(--smallFontSize);
                 }
             }
 
-            .duration{
+            .duration {
                 color: var(--textColor);
                 font-weight: 500;
                 font-size: var(--smallestFontSize);

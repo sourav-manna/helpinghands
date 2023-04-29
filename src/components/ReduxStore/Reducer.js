@@ -1,6 +1,7 @@
 export function Reducer(
     state={
         isLoggedin: localStorage.userId? true: false,
+        toggle:1,
     } ,
     action
 ){
@@ -16,6 +17,13 @@ export function Reducer(
             state = {...state};
             state.completedtime = action.payload;
             console.log("Complete", state.completedtime);
+            return state;
+        }
+
+        case "TOGGLE_BUTTON":{
+            state = {...state};
+            state.toggle = action.payload;
+            console.log("Toggle", state.toggle);
             return state;
         }
             

@@ -23,51 +23,126 @@
     --smallestFontSize: 0.6rem;
   }
 
+
+
 .parentCardDiv{
-    padding: 3px;
-}
-
-.childCardDiv{
+    margin: .7rem;
     background: var(--whiteColor);
-    margin: 1rem;
-    padding: 1rem;
-    border-radius: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    max-width: 100%;
+    overflow: auto;
+    max-height: 210px;
+    min-height: 150px;
 }
 
-.childCardDiv:hover{
+.parentCardDiv h6{
+    opacity: .6;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.parentCardDiv h2{
+    letter-spacing: 1px;
+    margin: 10px 0;
+}
+
+.childCardDiv1{
+   
+    background: var(--primaryColor);
+    color: var(--whiteColor);
+    min-width: 200px;
+    max-width: 200px;
+    text-overflow: clip;
+    padding: 20px;
+    width: 200px;
+    position: relative;
+}
+
+.childCardDiv1 a {
+    position: absolute;
+    margin-top: 20px;
+    opacity: .6;
+    transition: .5s ease-in-out;
+}
+
+.childCardDiv1 a:hover {
+    color: #005288;
+    padding: .5rem 1.2rem;
+    border-radius: 10px;
     background: var(--paleBlue);
-    transform: translateY(-.5rem);
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    
 }
 
-.headingCard{
-    font-size: var(--h1FontSize);
+.childCardDiv2 {
+    padding: 20px;
+    position: relative;
+    width: 100%;
 }
 
-.cardPara{
-    font-size: var(--h3FontSize);
-    padding-bottom: 10px;
+.progress-wrapper{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    text-align: right;
+    width: 150px;
 }
 
-.status{
-
+.progress{
+    background: #ddd;
+    border-radius: 30px;
+    height: 5px;
+    width: 100%;
 }
 
-.pendingStatus{
-    border: none;
-    border-radius: 5px;
-    font-size: 0.8rem;
-    padding: 2px 5px;
-    color: rgb(175, 8, 8);
-    margin-right: 10px;
-    background-color: rgba(241, 105, 105, 0.774);
+.progress::after{
+    content: "";
+    border-radius: 3px;
+    background: #5993e2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 5px;
+    width: 10%;
 }
+
+.progress-text{
+    font-size: 10px;
+    opacity: 1.3;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.childCardDiv2 p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+
+
 
 .addButton{
-    border: none;
-    padding: 2px 5px;
-    border-radius: 5px;
-    font-size: 1rem;
-    color: rgb(17, 78, 17);
-    background-color: rgba(8, 151, 108, 0.548);
+    background: var(--primaryColor);
+    border: 1px solid transparent;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 12px;
+    padding: 8px 16px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+
+.addButton:hover{
+    background: #fff;
+    color: var(--primaryColor);
+    transform: scale(1.05);
 }
