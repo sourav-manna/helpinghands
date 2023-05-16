@@ -3,6 +3,7 @@ import axios from "axios";
 import "./LoginRegister.css";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import Multiselect from "multiselect-react-dropdown";
 import image1 from "./img/img1.svg";
 import image2 from "./img/img2.svg";
 
@@ -14,8 +15,16 @@ export const LoginRegister = () => {
     name: "",
     email: "",
     password: "",
-    category: "",
+    category: [],
   });
+
+  const [categories] = useState([
+    "food",
+    "medical",
+    "rescue",
+    "infrastructure",
+    "others",
+  ]);
 
   const [data, setData] = useState({
     email: "",
@@ -23,7 +32,8 @@ export const LoginRegister = () => {
   });
 
   // signup validation using regex
-  const nameRegex = /^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)/;
+  const nameRegex =
+    /^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)/;
   const emailRegex =
     /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
   const passwordRegex = /^[A-Za-z0-9!@#$%^&*()_]{6,20}$/;
@@ -101,8 +111,8 @@ export const LoginRegister = () => {
       });
   };
 
-  useEffect(()=>{
-    if(localStorage.getItem("category")){
+  useEffect(() => {
+    if (localStorage.getItem("category")) {
       navigate("/mypage");
     }
   });
@@ -123,22 +133,23 @@ export const LoginRegister = () => {
 
     // check if user exists
 
-    axios.post("https://floodsupportapi.azurewebsites.net/login", data)
-    .then((res) => {
+    axios
+      .post("https://floodsupportapi.azurewebsites.net/login", data)
+      .then((res) => {
         if (res.data.status) {
-            localStorage.setItem("category", res.data.docs.category);
-            localStorage.setItem("userId", res.data.docs.uid);
-            localStorage.setItem("name", res.data.docs.name);
-            Swal.fire("Great!", "Login successful!", "success");
-            setTimeout(() => {
-                navigate("/mypage");
-            }, 3000);
+          localStorage.setItem("category", res.data.docs.category);
+          localStorage.setItem("userId", res.data.docs.uid);
+          localStorage.setItem("name", res.data.docs.name);
+          Swal.fire("Great!", "Login successful!", "success");
+          setTimeout(() => {
+            navigate("/mypage");
+          }, 3000);
         } else {
-            Swal.fire("Oops...", "Invalid credentials!", "error");
-            setData({ email: "", password: "" });
-            return;
+          Swal.fire("Oops...", "Invalid credentials!", "error");
+          setData({ email: "", password: "" });
+          return;
         }
-    })
+      });
 
     // const res = await axios.get("http://localhost:3003/login");
     // const users = res.data;
@@ -153,7 +164,7 @@ export const LoginRegister = () => {
 
     // if (userExists) {
     //   //alert("Login successful");
-      
+
     //   setData({ email: "", password: "" });
     //   return;
     // } else {
@@ -201,6 +212,7 @@ export const LoginRegister = () => {
             onSubmit={(e) => onSubmit(e)}
           >
             <h2 className="title">Sign up</h2>
+
             <div className="input-field">
               <i className="fas fa-user"></i>
               <input
@@ -249,6 +261,7 @@ export const LoginRegister = () => {
                 <option value="others">OTHERS</option>
               </select>
             </div>
+
             <input type="submit" class="btn solid" value="Sign up" />
           </form>
         </div>

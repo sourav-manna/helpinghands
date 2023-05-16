@@ -1,0 +1,91 @@
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 40rem;
+  height: 50%;
+  border-radius: 10px;
+  z-index: 1001;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.formContact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.formContact input {
+  width: 80%;
+  height: 2.5rem;
+
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.formContact textarea {
+  width: 80%;
+  height: 10rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.formContact button {
+  width: 80%;
+  height: 2.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  background-color: #65a7e4;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.formContact button:hover {
+  background-color: white;
+  color: #65a7e4;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  
+}
+
+
+
+.formContact .modalfooter {
+  content: "Hi";
+  position: absolute;
+  bottom: 25px;
+  margin-left: auto;
+  background: #65a7e4;
+  color: #fff;
+  width: 320px;
+  padding: 16px 4px 16px 0;
+  border-radius: 6px;
+  font-size: 13px;
+  box-shadow: 10px 10px 40px -14px #000;
+}
+
+.formContact .modalfooter span{
+    margin:0 5px 0 15px;
+}
+
+.formContact .modalfooter:hover {
+  background-color: white;
+  color: #1e90ff;
+}

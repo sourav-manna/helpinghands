@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./sidebar.css";
 
 // Imported Icons
@@ -6,8 +6,27 @@ import { IoMdSpeedometer, IoIosContacts, IoMdInformationCircle } from "react-ico
 import { BsQuestionCircle } from "react-icons/bs";
 import { BiLogOut } from "react-icons/bi";
 import { FaUserAlt } from "react-icons/fa";
+import { About } from "../Pages/About";
+import { Contact } from "../Pages/Contact";
+import { Report } from "../Pages/Report";
 
 const Sidebar = () => {
+  const [modalAbout, setModalAbout] = useState(false);
+  const [modalContact, setModalContact] = useState(false);
+  const [modalHelp, setModalHelp] = useState(false);
+
+
+  const modalHandlerAbout = () => {
+    setModalAbout(!modalAbout);
+  };
+
+  const modalHandlerContact = () => {
+    setModalContact(!modalContact);
+  };
+
+  const modalHandlerHelp = () => {
+    setModalHelp(!modalHelp);
+  };
 
   const changeHandler = () => {
     localStorage.clear();
@@ -32,7 +51,7 @@ const Sidebar = () => {
               </span>
             </a>
           </li>
-          <li className="listItem">
+          <li className="listItem" onClick={modalHandlerAbout}>
             <a href="#" className="menuLink flex">
               <IoMdInformationCircle className="icon"/>
               <span className="smallText">
@@ -40,7 +59,10 @@ const Sidebar = () => {
               </span>
             </a>
           </li>
-          <li className="listItem">
+          {
+            modalAbout && <About modalHandlerAbout={modalHandlerAbout}/>
+          }
+          <li className="listItem" onClick={modalHandlerContact}>
             <a href="#" className="menuLink flex">
               <IoIosContacts className="icon"/>
               <span className="smallText">
@@ -48,6 +70,9 @@ const Sidebar = () => {
               </span>
             </a>
           </li>
+          {
+            modalContact && <Contact modalHandlerContact={modalHandlerContact}/>
+          }
         </ul>
       </div>
       <div className="menuDiv">
@@ -81,7 +106,10 @@ const Sidebar = () => {
           <div className="circle2"></div>
           <h3>Help Center</h3>
           <p>Having trouble in Website?</p>
-          <button className="btn1">Report</button>
+          <button className="btn1" onClick={modalHandlerHelp}>Report</button>
+          {
+            modalHelp && <Report modalHandlerHelp={modalHandlerHelp}/>
+          }
         </div>
       </div>
     </div>

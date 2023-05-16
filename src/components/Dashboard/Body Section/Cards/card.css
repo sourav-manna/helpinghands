@@ -50,14 +50,15 @@
 
 .childCardDiv1{
    
-    background: var(--primaryColor);
+    background: var(--HoverColor);
     color: var(--whiteColor);
     min-width: 200px;
     max-width: 200px;
-    text-overflow: clip;
-    padding: 20px;
+    word-break: keep-all;
+    padding: 10px;
     width: 200px;
     position: relative;
+    
 }
 
 .childCardDiv1 a {
@@ -70,9 +71,8 @@
 .childCardDiv1 a:hover {
     color: #005288;
     padding: .5rem 1.2rem;
-    border-radius: 10px;
+    border-radius: 20px;
     background: var(--paleBlue);
-    
 }
 
 .childCardDiv2 {
@@ -96,7 +96,7 @@
     width: 100%;
 }
 
-.progress::after{
+/* .progress::after{
     content: "";
     border-radius: 3px;
     background: #5993e2;
@@ -105,7 +105,7 @@
     top: 0;
     height: 5px;
     width: 10%;
-}
+} */
 
 .progress-text{
     font-size: 10px;
@@ -132,7 +132,7 @@
     padding: 8px 16px;
     position: absolute;
     bottom: 10px;
-    right: 10px;
+    right: 20px;
     letter-spacing: 1px;
     cursor: pointer;
     transition: all .4s ease-in-out;
