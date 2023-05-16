@@ -83,7 +83,7 @@ export const Cards = (props) => {
   };
 
   // null string
-  var nullString = ""
+  var statusActivity;
 
   var btnActivity;
   if (status === "pending") {
@@ -92,11 +92,33 @@ export const Cards = (props) => {
         <Link>Mark as Process</Link>
       </button>
     );
+    statusActivity = (
+      <div
+        style={{
+          height: "5px",
+          width: 10 + "%",
+          backgroundColor: "#5993e2",
+          borderRadius: "3px",
+          transition: "width 1s ease-in-out",
+        }}
+      ></div>
+    );
   } else if (status === "inprocess") {
     btnActivity = (
       <button className="addButton" onClick={AddToComplete}>
         <Link>Mark as Complete</Link>
       </button>
+    );
+    statusActivity = (
+      <div
+        style={{
+          height: "5px",
+          width: 50 + "%",
+          backgroundColor: "	#f0ad4e",
+          borderRadius: "3px",
+          transition: "width 1s ease-in-out",
+        }}
+      ></div>
     );
   } else if (status === "completed") {
     btnActivity = (
@@ -104,9 +126,21 @@ export const Cards = (props) => {
         Done
       </button>
     );
+
+    statusActivity = (
+      <div
+        style={{
+          height: "5px",
+          width: 100 + "%",
+          backgroundColor: "#00FF00",
+          borderRadius: "3px",
+          transition: "width 1s ease-in-out",
+        }}
+      ></div>
+    );
   }
 
-  const urlString = `https://twitter.com/i/web/status/${props._id}`
+  const urlString = `https://twitter.com/i/web/status/${props._id}`;
 
   return (
     <div className="parentCardDiv">
@@ -114,18 +148,17 @@ export const Cards = (props) => {
         <h6>Followers: {props.followerCount}</h6>
         <h2>{props.username}</h2>
 
-        <a href={urlString} target="_blank" rel="noreferrer">View Details ➡</a>
+        <a href={urlString} target="_blank" rel="noreferrer">
+          View Details ➡
+        </a>
       </div>
       <div className="childCardDiv2">
         <div className="progress-wrapper">
-          <div className="progress"></div>
+          <div className="progress">{statusActivity}</div>
           <span className="progress-text">{props.status}</span>
         </div>
         <h6>{props.date}</h6>
-        {
-          props.location?<h3>{props.location}</h3>:<h3>India</h3>
-
-        }
+        {props.location ? <h3>{props.location}</h3> : <h3>India</h3>}
         <p className="p-trunc">{props.tweetText}</p>
         {btnActivity}
       </div>

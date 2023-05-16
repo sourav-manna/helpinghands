@@ -22,7 +22,7 @@
 }
 
 .listingSection {
-  flex-basis: 110%;
+  flex-basis: 130%;
   margin-top: 1rem;
 }
 .listingSection .heading {
@@ -48,7 +48,7 @@
   cursor: pointer;
 }
 .listingSection .secContainer .tweetDiv {
-  max-height: 21rem;
+  max-height: 54vh;
   overflow: auto;
   border-radius: 1rem;
   border: 1px solid var(--itemCardColor);

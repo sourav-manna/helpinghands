@@ -25,7 +25,8 @@ export const LandingPage = () => {
         </div>
 
         <div className='container1'>
-            <img src={Image} alt='img' className='landing__img'/>
+        
+<lottie-player src="https://assets9.lottiefiles.com/private_files/lf30_drmhmvq7.json"  background="transparent"  speed="1"  style={{width: "1000px", height: "1000px", transform:"scaleX(-1)"}} loop  autoplay></lottie-player>
         </div>
 
     </div>

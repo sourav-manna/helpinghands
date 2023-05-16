@@ -111,7 +111,8 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-.topSection .cardSection .rightCard h1, .topSection .cardSection .rightCard p {
+.topSection .cardSection .rightCard h1,
+.topSection .cardSection .rightCard p {
   z-index: 100;
 }
 .topSection .cardSection .rightCard h1 {

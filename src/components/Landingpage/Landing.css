@@ -1,6 +1,7 @@
 .containerforlanding{
     display: flex;
     height: 100vh;
+    
     width: auto;
     display: flex;
     flex-direction: row;
@@ -53,14 +54,14 @@
 .landing__button{
     font-size: 15px !important;
     
-    color: black;
+    color: #fff;
     padding:2% 5%;
     width: 50%;
     border-radius: 1rem;
     margin-top: 1rem;
     text-decoration: none;
     text-align: center;
-    font-weight: bold;
+    font-weight: 600;
     letter-spacing: 1px;
     border: none;
 }
