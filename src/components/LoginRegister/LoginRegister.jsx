@@ -32,8 +32,8 @@ export const LoginRegister = () => {
   });
 
   // signup validation using regex
-  const nameRegex =
-    /^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)/;
+  // const nameRegex =
+  //   /^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)/;
   const emailRegex =
     /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
   const passwordRegex = /^[A-Za-z0-9!@#$%^&*()_]{6,20}$/;
@@ -63,11 +63,11 @@ export const LoginRegister = () => {
 
     // name validation
 
-    if (!nameRegex.test(user.name)) {
-      errors[errors.length] = "Please enter a valid name";
-      alert("Please enter a valid name");
-      return;
-    }
+    // if (!nameRegex.test(user.name)) {
+    //   errors[errors.length] = "Please enter a valid name";
+    //   alert("Please enter a valid name");
+    //   return;
+    // }
 
     // email validation
 
@@ -81,9 +81,9 @@ export const LoginRegister = () => {
 
     if (!passwordRegex.test(user.password)) {
       errors[errors.length] =
-        "Password must contain atleast 8 characters, 1 letter and 1 number";
+        "Password must contain atleast 8 characters";
       alert(
-        "Password must contain atleast 8 characters, 1 letter and 1 number"
+        "Password must contain atleast 6 characters"
       );
       return;
     }
